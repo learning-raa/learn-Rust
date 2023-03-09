@@ -12,9 +12,9 @@ fn main() {
         .expect("ERRerr");
     println!("{}", textIn);
     process( &textIn );
-
+    
     ownExample( textIn );
-
+    
     textIn = String::from("new one!!!!!!111");
     println!("own back: {}", textIn);
     
