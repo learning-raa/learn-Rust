@@ -1,10 +1,16 @@
+use std::io;
+
 fn main() {
     println!("rust in..");
     //
     
-    let mut v1 = String::from("hel");
-    v1.push_str("low");
-    println!("{}", v1);
+    println!("enter:");
+    let mut textIn = String::new();
+    
+    io::stdin()
+        .read_line(&mut textIn)
+        .expect("ERRerr");
+    println!("{}", textIn);
     
     //
     println!("..rust out!");
