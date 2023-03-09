@@ -4,7 +4,7 @@ binname="learn-Rust"
 help:
 	@echo 'there is no help.. yet'
 
-run:
+run: release size
 	@./target/release/$(binname)
 
 edit:
