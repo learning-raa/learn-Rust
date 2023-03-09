@@ -6,6 +6,7 @@ fn main() {
     
     println!("enter:");
     let mut textIn = String::new();
+    let mut numderIn = 0;
     
     io::stdin()
         .read_line(&mut textIn)
