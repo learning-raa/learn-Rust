@@ -1,3 +1,7 @@
 fn main() {
-    println!("Hello, world!");
+    println!("rust in..");
+    //
+
+    //
+    println!("..rust out!");
 }
