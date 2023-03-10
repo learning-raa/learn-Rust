@@ -1,9 +1,15 @@
 use std::io;
 
+use crate::not_main::*;
+mod not_main;
+
 fn main() {
     println!("[rust in..]");
     //
     
+    testMacros();
+    runThread();
+
     println!("enter:");
     let mut textIn = String::new();
     
