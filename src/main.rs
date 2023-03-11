@@ -16,12 +16,12 @@ fn main() {
         .read_line(&mut textIn)
         .expect("ERRerr");
     
-    match textIn {
+    match &textIn[..len] {
         "1" => println!("the ONE"),
         _ => println!("others"),
     }
     
-    println!("entered: {}", textIn);
+    println!("entered:<{}>", textIn);
     
         
     //
