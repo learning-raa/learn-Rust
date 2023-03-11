@@ -1,7 +1,15 @@
 use std::io;
 
-//use crate::not_main::*;
-//mod not_main;
+use crate::macro_test::*;
+mod macro_test;
+
+use crate::thread_test::*;
+mod thread_test;
+
+use crate::owning_test::*;
+mod owning_test;
+
+
 
 fn main() {
     println!("[rust in..]");
@@ -16,14 +24,15 @@ fn main() {
         .read_line(&mut textIn)
         .expect("ERRerr");
     
+    let len = textIn.len() - 1;
     match &textIn[..len] {
-        "1" => println!("the ONE"),
-        _ => println!("others"),
+        "1" => testMacros(),
+        "2" => runThread(),
+        "3" => testOwning(),
+        _ => println!("unknown tag. exit"),
     }
     
-    println!("entered:<{}>", textIn);
     
-        
     //
     println!("[..rust out!]");
 }
