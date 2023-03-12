@@ -9,6 +9,9 @@ mod thread_test;
 use crate::owning_test::*;
 mod owning_test;
 
+use crate::slices_test::*;
+mod slices_test;
+
 
 
 fn main() {
@@ -17,6 +20,7 @@ fn main() {
     println!(" 1 - testMacros");
     println!(" 2 - runThread");
     println!(" 3 - testOwning");
+    println!(" 4 - testSlices");
     println!("enter task tag:");
     
     let mut textIn = String::new();
@@ -29,6 +33,7 @@ fn main() {
         "1" => testMacros(),
         "2" => runThread(),
         "3" => testOwning(),
+        "4" => testSlices(),
         _ => println!("unknown tag. exit"),
     }
     
