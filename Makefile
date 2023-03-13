@@ -18,6 +18,9 @@ release:
 
 size:
 	@ls -lAh ./target/release/$(binname)
+	
+path:
+	@export LD_LIBRARY_PATH=/home/configurator/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/
 
 clean:
 	@cargo clean
