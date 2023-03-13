@@ -12,6 +12,9 @@ mod owning_test;
 use crate::slices_test::*;
 mod slices_test;
 
+use crate::cursive_test::*;
+mod cursive_test;
+
 
 
 fn main() {
@@ -21,6 +24,7 @@ fn main() {
     println!(" 2 - runThread");
     println!(" 3 - testOwning");
     println!(" 4 - testSlices");
+    println!(" 0 - testCursive");
     println!("enter task tag:");
     
     let mut textIn = String::new();
@@ -34,6 +38,7 @@ fn main() {
         "2" => runThread(),
         "3" => testOwning(),
         "4" => testSlices(),
+        "0" => testCursive(),
         _ => println!("unknown tag. exit"),
     }
     
