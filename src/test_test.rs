@@ -15,6 +15,15 @@ mod test {
 
     #[test]
     fn alphaTest(){
-        println!("--> in alpha testOR");
+        assert!(true, "true was false");
+    }
+    #[test]
+    fn bettaFall(){
+        assert!(false, "got false!");
+    }
+    #[test]
+    #[should_panic]
+    fn letsPanic(){
+        panic!("a bit panicue");
     }
 }
