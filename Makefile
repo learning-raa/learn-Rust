@@ -16,6 +16,9 @@ savetogit:
 release:
 	@cargo rustc --release -- -C prefer-dynamic
 
+test:
+	@cargo test
+
 size:
 	@ls -lAh ./target/release/$(binname)
 	
