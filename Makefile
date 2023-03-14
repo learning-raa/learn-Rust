@@ -5,6 +5,7 @@ help:
 	@echo 'there is no help.. yet'
 
 run: release size
+	@export LD_LIBRARY_PATH=/home/configurator/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/
 	@./target/release/$(binname)
 
 edit:
@@ -20,7 +21,7 @@ size:
 	@ls -lAh ./target/release/$(binname)
 	
 path:
-	@export LD_LIBRARY_PATH=/home/configurator/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/
+	export LD_LIBRARY_PATH='/home/configurator/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib'; echo $(LD_LIBRARY_PATH)
 
 clean:
 	@cargo clean
