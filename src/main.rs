@@ -1,3 +1,5 @@
+#![allow(non_snake_case)]
+
 
 use std::io;
 
@@ -16,6 +18,9 @@ mod slices_test;
 use crate::cursive_test::*;
 mod cursive_test;
 
+use crate::test_test::*;
+mod test_test;
+
 
 
 fn main() {
@@ -25,6 +30,7 @@ fn main() {
     println!(" 2 - runThread");
     println!(" 3 - testOwning");
     println!(" 4 - testSlices");
+    println!(" 5 - testTest");
     println!(" 0 - testCursive");
     println!("enter task tag:");
     
@@ -39,6 +45,7 @@ fn main() {
         "2" => runThread(),
         "3" => testOwning(),
         "4" => testSlices(),
+        "5" => testTest(),
         "0" => testCursive(),
         _ => println!("unknown tag. exit"),
     }

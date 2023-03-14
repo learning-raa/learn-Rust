@@ -14,7 +14,7 @@ savetogit:
 	@git add . && git commit -m 'saving' && git push
 
 release:
-	@cargo rustc --release -- -C prefer-dynamic -A non-snake-case
+	@cargo rustc --release -- -C prefer-dynamic
 
 size:
 	@ls -lAh ./target/release/$(binname)

@@ -1,3 +1,5 @@
+#![allow(non_snake_case)]
+
 use cursive::Cursive;
 use cursive::views::{Dialog, TextView};
 
